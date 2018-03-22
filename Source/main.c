@@ -89,6 +89,7 @@
 #include "task.h"
 #include "semphr.h"
 
+#include "serial8250_uart.h"
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
@@ -118,10 +119,12 @@ void vApplicationTickHook( void );
  * various different API functions.
  */
 /*-----------------------------------------------------------*/
-static void (*rkTrace)(char *,...) = (void *)0x60003988;
 int main( void )
 {
-	rkTrace("init RKOS\n", "");
+	uartInit();
+
+	uartPuts("Welcom to FreeRTOSv10.0.1\n");
+
 	/* Configure the hardware ready to run the demo. */
 	prvSetupHardware();
 

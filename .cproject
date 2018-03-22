@@ -33,6 +33,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS-Source}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS-Source/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS-Source/Portable/RVDS/ARM_CA7}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/RK/include}&quot;"/>
 								</option>
 								<option id="com.arm.tool.c.compiler.option.debug.enableToolSpecificSettings.982896150" name="Enable tool specific settings" superClass="com.arm.tool.c.compiler.option.debug.enableToolSpecificSettings" useByScannerDiscovery="false" value="false" valueType="boolean"/>
 								<option id="com.arm.tool.c.compiler.options.debug.format.1064649202" name="Debug format" superClass="com.arm.tool.c.compiler.options.debug.format" useByScannerDiscovery="false" value="com.arm.tool.c.compiler.options.debug.format.auto" valueType="enumerated"/>
@@ -79,6 +80,9 @@
 							<tool id="com.arm.tool.librarian.1838211919" name="ARM Librarian 5" superClass="com.arm.tool.librarian"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -118,6 +122,9 @@
 							<tool id="com.arm.tool.librarian.362447383" name="ARM Librarian 5" superClass="com.arm.tool.librarian"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
