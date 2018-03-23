@@ -28,12 +28,10 @@
 								<option id="com.arm.tool.c.compiler.option.endian.1694721685" name="Byte order" superClass="com.arm.tool.c.compiler.option.endian" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.option.endian.auto" valueType="enumerated"/>
 								<option id="com.arm.tool.c.compiler.option.incpath.1838023989" name="Include path (-I)" superClass="com.arm.tool.c.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/RK/vector}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/RK/handler}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS-Source}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS-Source/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS-Source/Portable/RVDS/ARM_CA7}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/RK/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS/Source/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Source/FreeRTOS/Source/portable/RVDS/ARM_CA7}&quot;"/>
 								</option>
 								<option id="com.arm.tool.c.compiler.option.debug.enableToolSpecificSettings.982896150" name="Enable tool specific settings" superClass="com.arm.tool.c.compiler.option.debug.enableToolSpecificSettings" useByScannerDiscovery="false" value="false" valueType="boolean"/>
 								<option id="com.arm.tool.c.compiler.options.debug.format.1064649202" name="Debug format" superClass="com.arm.tool.c.compiler.options.debug.format" useByScannerDiscovery="false" value="com.arm.tool.c.compiler.options.debug.format.auto" valueType="enumerated"/>
@@ -81,7 +79,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/FreeRTOS/Source/portable/RVDS/ARM7_LPC21xx|Source/FreeRTOS/Source/portable/RVDS/ARM_CM7|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4F|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4_MPU|Source/FreeRTOS/Source/portable/RVDS/ARM_CM3|Source/FreeRTOS/Source/portable/RVDS/ARM_CM0|Source/FreeRTOS/Source/portable/RVDS/ARM_CA9|Source/FreeRTOS/Source/portable/MemMang/heap_5.c|Source/FreeRTOS/Source/portable/MemMang/heap_3.c|Source/FreeRTOS/Source/portable/MemMang/heap_2.c|Source/FreeRTOS/Source/portable/MemMang/heap_1.c|Source/FreeRTOS/Source/portable/GCC|Source/License|Source/FreeRTOS-Source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -123,7 +121,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/FreeRTOS/Source/portable/RVDS/ARM7_LPC21xx|Source/FreeRTOS/Source/portable/RVDS/ARM_CM7|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4F|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4_MPU|Source/FreeRTOS/Source/portable/RVDS/ARM_CM3|Source/FreeRTOS/Source/portable/RVDS/ARM_CM0|Source/FreeRTOS/Source/portable/RVDS/ARM_CA9|Source/FreeRTOS/Source/portable/MemMang/heap_5.c|Source/FreeRTOS/Source/portable/MemMang/heap_3.c|Source/FreeRTOS/Source/portable/MemMang/heap_2.c|Source/FreeRTOS/Source/portable/MemMang/heap_1.c|Source/FreeRTOS/Source/portable/GCC|Source/License|Source/FreeRTOS-Source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
