@@ -93,7 +93,7 @@
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
-#define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	0
+#define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	1
 
 /*-----------------------------------------------------------*/
 
@@ -106,6 +106,9 @@ static void prvSetupHardware( void );
  * main_blinky() is used when mainCREATE_SIMPLE_BLINKY_DEMO_ONLY is set to 1.
  * main_full() is used when mainCREATE_SIMPLE_BLINKY_DEMO_ONLY is set to 0.
  */
+#if mainCREATE_SIMPLE_BLINKY_DEMO_ONLY == 1
+	extern void main_blinky( void );
+#endif /* #if mainCREATE_SIMPLE_BLINKY_DEMO_ONLY == 1 */
 
 /* Prototypes for the standard FreeRTOS callback/hook functions implemented
 within this file. */
@@ -121,27 +124,35 @@ void vApplicationTickHook( void );
 /*-----------------------------------------------------------*/
 int main( void )
 {
-	uartInit();
-
-	uartPuts("Welcom to FreeRTOSv10.0.1\n");
-
 	/* Configure the hardware ready to run the demo. */
 	prvSetupHardware();
 
+	uartPuts("Welcom to FreeRTOSv10.0.1\n");
+
 	/* The mainCREATE_SIMPLE_BLINKY_DEMO_ONLY setting is described at the top
 	of this file. */
+	#if mainCREATE_SIMPLE_BLINKY_DEMO_ONLY == 1
+	{
+		main_blinky();
+	}
+	#endif
 
 	return 0;
 }
 /*-----------------------------------------------------------*/
 
+static void setJtagIomux( void )
+{
+        /* GRF_GPIO2D_IOMUX[5:2] = {1010} */
+        ((*(unsigned int *) (0x1030002c)) = (0x003c0028));
+}
+/*-----------------------------------------------------------*/
+
 static void prvSetupHardware( void )
 {
-	/* Initialise the pins used by the LEDs (the obscure [now for historical
-	reasons] name ParTest stands for Parallel Port test). */
-
-    /* Call the Renesas driver that initialises the serial port.  P1=66.67MHz
-	CKS=0 SCBRR=17 Bit rate error=0.46% => Baud rate=115200bps. */
+	/* Serial init */
+//	setJtagIomux();
+	uartInit();
 }
 /*-----------------------------------------------------------*/
 
