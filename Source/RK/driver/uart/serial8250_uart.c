@@ -153,10 +153,13 @@ static void uartFlush()
 
 void uartPuts(const char *pStr)
 {
-    while (*pStr != 0) {
-	uartPutc(*pStr);
-        pStr++;
-    }
+	while (*pStr != 0) {
+		uartPutc(*pStr);
+		pStr++;
+	}
 
-    uartPutc('\r');
+	if (*(--pStr) != '\n')
+		uartPutc('\n');
+
+	uartPutc('\r');
 }
