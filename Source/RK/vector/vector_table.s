@@ -50,7 +50,7 @@
 	IMPORT  prefetch_handler
 	IMPORT  abort_handler
 	IMPORT  reserved_handler
-	IMPORT  FreeRTOS_IRQ_Handler
+	IMPORT  irq_handler
 	IMPORT  fiq_handler
 
 	ENTRY
@@ -66,7 +66,7 @@ vector_table
 	LDR pc, =prefetch_handler      ; 0x0000_000c
 	LDR pc, =abort_handler         ; 0x0000_0010
 	LDR pc, =reserved_handler      ; 0x0000_0014
-	LDR pc, =FreeRTOS_IRQ_Handler  ; 0x0000_0018
+	LDR pc, =irq_handler           ; 0x0000_0018
 	LDR pc, =fiq_handler           ; 0x0000_001c
 
 Literals

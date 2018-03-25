@@ -60,6 +60,7 @@ Thum_bit		EQU		0x20			; CPSR/SPSR Thumb bit
 	IMPORT  ||Image$$ABT_STACK$$ZI$$Limit||       ; Linker symbol from scatter file
 
 	IMPORT  main
+	IMPORT  vector_table
 
 	EXPORT	reset_handler
 	EXPORT	undefined_handler
@@ -82,6 +83,13 @@ reset_handler	FUNCTION {}
 	BIC  r0, r0, #(0x1 <<  2)		;;; Clear C bit  2 to disable D Cache
 	BIC  r0, r0, #0x1				;;; Clear M bit  0 to disable MMU
 	MCR  p15, 0, r0, c1, c0, 0		;;; Write value back to CP15 System Control register
+
+;==================================================================
+; Disable interrupts (FIQ and IRQ)
+;==================================================================
+	MRS  r0, CPSR
+	ORR  r0, r0, #0xc0
+	MSR  CPSR_cxsf, r0
 
 ;==================================================================
 ; Setting up Stack Area
@@ -208,6 +216,12 @@ Finished
 	BIC  r0, r0, #0x2					;;; Clear A bit  1 to disable strict alignment fault checking
 	ORR  r0, r0, #0x1					;;; Set M bit 0 to enable MMU before scatter loading
 	MCR  p15, 0, r0, c1, c0, 0			;;; Write CP15 System Control register
+
+;===================================================================
+; Set vector address in CP15 VBAR register
+;===================================================================
+	LDR  r0, =vector_table
+	MCR  p15, 0, r0, c12, c0, 0
 
 ;===================================================================
 ; Branch to __main

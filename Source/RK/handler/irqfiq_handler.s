@@ -47,7 +47,21 @@ INTC_ICCEOIR_ADDR   EQU 	0xE8202010
 	PRESERVE8
 	AREA IRQ_FIQ_HANDLER, CODE, READONLY
 
+	IMPORT  IrqHandler
+
+	EXPORT  irq_handler
 	EXPORT  fiq_handler
+
+irq_handler
+	SUB	LR, LR, #4			; save return pc addr
+	STMFD	SP!, {R0-R12, LR}
+	MRS	R1, SPSR
+	STMFD	SP!, {R1}			;save CPSR before IRQ
+	BL	IrqHandler
+	LDMFD	SP!, {R1}
+	MSR	SPSR_cxsf, R1
+	LDMFD	SP!, {R0-R12, PC}^
+
 FiqHandler_Interrupt
 	B	FiqHandler_Interrupt
 

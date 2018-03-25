@@ -153,6 +153,9 @@ static void prvSetupHardware( void )
 	/* Serial init */
 //	setJtagIomux();
 	uartInit();
+
+	InitInterrupt();
+	EnableInterrupts();
 }
 /*-----------------------------------------------------------*/
 
