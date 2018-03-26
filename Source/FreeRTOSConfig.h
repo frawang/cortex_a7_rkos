@@ -199,7 +199,7 @@ used. */
 
 /* The following constants describe the hardware, and are correct for the
 Renesas RZ MPU. */
-#define configINTERRUPT_CONTROLLER_BASE_ADDRESS	0xE8201000
+#define configINTERRUPT_CONTROLLER_BASE_ADDRESS	0x32010000
 #define configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET 0x1000
 #define configUNIQUE_INTERRUPT_PRIORITIES		32
 
