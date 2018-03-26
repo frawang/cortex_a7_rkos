@@ -26,6 +26,7 @@
 /* IRQ ID SPI */
 typedef enum
 {
+    ARCH_GENERIC_TIMER_PPI_IRQ = 29,
     BUS_DMAC_IRQ = 32,
     CEVAXM4_EPP_WDOG_VIOL_IRQ,
     DDRUPCTL_INTR,

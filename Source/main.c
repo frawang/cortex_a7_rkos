@@ -89,6 +89,8 @@
 #include "task.h"
 #include "semphr.h"
 
+#include "interrupt.h"
+#include "generic_timer.h"
 #include "serial.h"
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
@@ -124,10 +126,12 @@ void vApplicationTickHook( void );
 /*-----------------------------------------------------------*/
 int main( void )
 {
-	/* Configure the hardware ready to run the demo. */
-	prvSetupHardware();
+	serial_init();
 
 	debug("Welcom to FreeRTOSv10.0.1\n");
+
+	/* Configure the hardware ready to run the demo. */
+	prvSetupHardware();
 
 	/* The mainCREATE_SIMPLE_BLINKY_DEMO_ONLY setting is described at the top
 	of this file. */
@@ -152,10 +156,9 @@ static void prvSetupHardware( void )
 {
 	/* Serial init */
 //	setJtagIomux();
-	serial_init();
-
 	InitInterrupt();
 	EnableInterrupts();
+	armGenericTimerInit(ARCH_GENERIC_TIMER_PPI_IRQ, 0);
 }
 /*-----------------------------------------------------------*/
 
