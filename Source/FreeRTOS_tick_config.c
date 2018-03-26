@@ -70,6 +70,12 @@
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
+#include "generic_timer.h"
+
+void vConfigureTickInterrupt( void )
+{
+	armGenericTimerInit(ARCH_GENERIC_TIMER_PPI_IRQ, 0);
+}
 
 unsigned long ulGetRunTimeCounterValue( void )
 {
@@ -77,13 +83,7 @@ unsigned long ulGetRunTimeCounterValue( void )
 	return 0;
 }
 
-void vConfigureTickInterrupt( void )
-{
-
-}
-
 void vInitialiseRunTimeStats( void )
 {
 
 }
-
