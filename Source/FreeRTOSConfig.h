@@ -208,5 +208,11 @@ code (which is where the vector table is defined). */
 #define FreeRTOS_IRQ_Handler IRQ_Handler
 #define FreeRTOS_SWI_Handler SWI_Handler
 
+/*
+ * For RV1108 platform, Jtag's iomux is shared with Uart2, so via defining the
+ * following macro to config the corresponding function.
+ */
+#define configRK_JTAG_IOMUX_ENABLE	0
+
 #endif /* FREERTOS_CONFIG_H */
 

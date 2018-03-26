@@ -119,6 +119,8 @@ void vApplicationIdleHook( void );
 void vApplicationStackOverflowHook( TaskHandle_t pxTask, char *pcTaskName );
 void vApplicationTickHook( void );
 
+static void setJtagIomux( void );
+
 /*
  * Creates and verifies different files on the volume, demonstrating the use of
  * various different API functions.
@@ -126,8 +128,11 @@ void vApplicationTickHook( void );
 /*-----------------------------------------------------------*/
 int main( void )
 {
+#if configRK_JTAG_IOMUX_ENABLE == 1
+	setJtagIomux();
+#else
 	serial_init();
-
+#endif
 	debug("Welcom to FreeRTOSv10.0.1\n");
 
 	/* Configure the hardware ready to run the demo. */
@@ -154,11 +159,8 @@ static void setJtagIomux( void )
 
 static void prvSetupHardware( void )
 {
-	/* Serial init */
-//	setJtagIomux();
 	InitInterrupt();
 	EnableInterrupts();
-	armGenericTimerInit(ARCH_GENERIC_TIMER_PPI_IRQ, 0);
 }
 /*-----------------------------------------------------------*/
 
