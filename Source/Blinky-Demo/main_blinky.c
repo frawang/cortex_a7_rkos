@@ -109,7 +109,7 @@
 #include "task.h"
 #include "semphr.h"
 
-#include "serial8250_uart.h"
+#include "serial.h"
 
 /* Priorities at which the tasks are created. */
 #define mainQUEUE_RECEIVE_TASK_PRIORITY		( tskIDLE_PRIORITY + 2 )
@@ -226,7 +226,7 @@ const unsigned long ulExpectedValue = 100UL;
 		is it the expected value?  If it is, toggle the LED. */
 		if( ulReceivedValue == ulExpectedValue )
 		{
-			uartPuts("mainTASK_NOTE");
+			debug("mainTASK_NOTE\n");
 			ulReceivedValue = 0U;
 		}
 	}

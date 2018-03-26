@@ -89,7 +89,7 @@
 #include "task.h"
 #include "semphr.h"
 
-#include "serial8250_uart.h"
+#include "serial.h"
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
@@ -127,7 +127,7 @@ int main( void )
 	/* Configure the hardware ready to run the demo. */
 	prvSetupHardware();
 
-	uartPuts("Welcom to FreeRTOSv10.0.1\n");
+	debug("Welcom to FreeRTOSv10.0.1\n");
 
 	/* The mainCREATE_SIMPLE_BLINKY_DEMO_ONLY setting is described at the top
 	of this file. */
@@ -152,7 +152,7 @@ static void prvSetupHardware( void )
 {
 	/* Serial init */
 //	setJtagIomux();
-	uartInit();
+	serial_init();
 
 	InitInterrupt();
 	EnableInterrupts();

@@ -79,7 +79,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Source/FreeRTOS/Source/portable/RVDS/ARM7_LPC21xx|Source/FreeRTOS/Source/portable/RVDS/ARM_CM7|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4F|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4_MPU|Source/FreeRTOS/Source/portable/RVDS/ARM_CM3|Source/FreeRTOS/Source/portable/RVDS/ARM_CM0|Source/FreeRTOS/Source/portable/RVDS/ARM_CA9|Source/FreeRTOS/Source/portable/MemMang/heap_5.c|Source/FreeRTOS/Source/portable/MemMang/heap_3.c|Source/FreeRTOS/Source/portable/MemMang/heap_2.c|Source/FreeRTOS/Source/portable/MemMang/heap_1.c|Source/FreeRTOS/Source/portable/GCC|Source/License|Source/FreeRTOS-Source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/RK/lib/serial/vsprintf.c|Source/FreeRTOS/Source/portable/RVDS/ARM7_LPC21xx|Source/FreeRTOS/Source/portable/RVDS/ARM_CM7|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4F|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4_MPU|Source/FreeRTOS/Source/portable/RVDS/ARM_CM3|Source/FreeRTOS/Source/portable/RVDS/ARM_CM0|Source/FreeRTOS/Source/portable/RVDS/ARM_CA9|Source/FreeRTOS/Source/portable/MemMang/heap_5.c|Source/FreeRTOS/Source/portable/MemMang/heap_3.c|Source/FreeRTOS/Source/portable/MemMang/heap_2.c|Source/FreeRTOS/Source/portable/MemMang/heap_1.c|Source/FreeRTOS/Source/portable/GCC|Source/License|Source/FreeRTOS-Source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -121,7 +121,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Source/FreeRTOS/Source/portable/RVDS/ARM7_LPC21xx|Source/FreeRTOS/Source/portable/RVDS/ARM_CM7|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4F|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4_MPU|Source/FreeRTOS/Source/portable/RVDS/ARM_CM3|Source/FreeRTOS/Source/portable/RVDS/ARM_CM0|Source/FreeRTOS/Source/portable/RVDS/ARM_CA9|Source/FreeRTOS/Source/portable/MemMang/heap_5.c|Source/FreeRTOS/Source/portable/MemMang/heap_3.c|Source/FreeRTOS/Source/portable/MemMang/heap_2.c|Source/FreeRTOS/Source/portable/MemMang/heap_1.c|Source/FreeRTOS/Source/portable/GCC|Source/License|Source/FreeRTOS-Source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/RK/lib/serial/vsprintf.c|Source/FreeRTOS/Source/portable/RVDS/ARM7_LPC21xx|Source/FreeRTOS/Source/portable/RVDS/ARM_CM7|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4F|Source/FreeRTOS/Source/portable/RVDS/ARM_CM4_MPU|Source/FreeRTOS/Source/portable/RVDS/ARM_CM3|Source/FreeRTOS/Source/portable/RVDS/ARM_CM0|Source/FreeRTOS/Source/portable/RVDS/ARM_CA9|Source/FreeRTOS/Source/portable/MemMang/heap_5.c|Source/FreeRTOS/Source/portable/MemMang/heap_3.c|Source/FreeRTOS/Source/portable/MemMang/heap_2.c|Source/FreeRTOS/Source/portable/MemMang/heap_1.c|Source/FreeRTOS/Source/portable/GCC|Source/License|Source/FreeRTOS-Source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
