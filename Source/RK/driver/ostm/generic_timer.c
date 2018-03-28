@@ -69,7 +69,7 @@ void armGenericTimerInit(int irq, unsigned int freq_override)
 		cntfrq = freq_override;
 	}
 
-	timer_reload_val = (cntfrq / configTICK_RATE_HZ) * 10; /* 10ms */
+	timer_reload_val = cntfrq / configTICK_RATE_HZ; /* 10ms */
 
 	IrqRegister(ARCH_GENERIC_TIMER_PPI_IRQ, &platformTick, NULL);
 

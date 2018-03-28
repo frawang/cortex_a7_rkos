@@ -1163,6 +1163,8 @@ typedef struct xSTATIC_STREAM_BUFFER
 /* Message buffers are built on stream buffers. */
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
 
+#include "serial.h"
+
 #ifdef __cplusplus
 }
 #endif
